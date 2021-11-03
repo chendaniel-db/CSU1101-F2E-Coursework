@@ -98,14 +98,14 @@ button:hover {
     padding: 7px 14px;
     border: 1px solid white;
     font-weight: bold;
-    opacity: .85;
+    opacity: .9;
 }
 
     .btn-outline-primary:hover {
         background-color: #13445e;
         border: 0;
         border: 1px solid white;
-        opacity: .85;
+        opacity: .9;
     }
 
 .btn-outline-danger {
@@ -116,7 +116,7 @@ button:hover {
     padding: 7px 14px;
     border: 1px solid white;
     font-weight: bold;
-    opacity: .85;
+    opacity: .9;
 }
 
     .btn-outline-danger:hover {
@@ -124,11 +124,11 @@ button:hover {
         color: white;
         border: 1px solid white;
         font-weight: bold;
-        opacity: .85;
+        opacity: .9;
     }
 
 .card {
-    opacity: .85;
+    opacity: .9;
 }
 
 .form-control {
