@@ -1,0 +1,147 @@
+﻿body {
+    background: url('../img/backgroung.jpg') center center fixed;
+    background-size:cover;
+}
+
+    body::-webkit-scrollbar {
+        width: 15px;
+    }
+
+    body::-webkit-scrollbar-track {
+        background: #F0F0F0;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: #BEBEBE;
+        border-radius: 100px;
+    }
+
+.container {
+    margin-top: 50px;
+}
+
+.A, p {
+    font-size: 20px;
+}
+
+img {
+    border-radius: 10px;
+}
+
+table {
+    text-align: center;
+    font-size: 18px;
+}
+
+tfoot {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+tbody > tr:hover {
+    background-color: #FFE5CC;
+    transition: 0.1s;
+}
+
+button:hover {
+    transition: 0.5s;
+}
+
+
+
+.toTop-arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 40%;
+    opacity: 0.8;
+    background: #000;
+    cursor: pointer;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    display: none;
+}
+
+    .toTop-arrow::before, .toTop-arrow::after {
+        width: 18px;
+        height: 5px;
+        border-radius: 8px;
+        background: #f90;
+        position: absolute;
+        content: "";
+    }
+
+    .toTop-arrow::before {
+        transform: rotate(-45deg) translate(0, -50%);
+        left: 0.5rem;
+    }
+
+    .toTop-arrow::after {
+        transform: rotate(45deg) translate(0, -50%);
+        right: 0.5rem;
+    }
+
+    .toTop-arrow:focus {
+        outline: none;
+    }
+
+
+.btn-outline-primary {
+    background-color: #1c6288;
+    font-size: 20px;
+    border-radius: 50px;
+    color: white;
+    padding: 7px 14px;
+    border: 1px solid white;
+    font-weight: bold;
+    opacity: .85;
+}
+
+    .btn-outline-primary:hover {
+        background-color: #13445e;
+        border: 0;
+        border: 1px solid white;
+        opacity: .85;
+    }
+
+.btn-outline-danger {
+    background-color: #CE0000;
+    font-size: 20px;
+    color: white;
+    border-radius: 50px;
+    padding: 7px 14px;
+    border: 1px solid white;
+    font-weight: bold;
+    opacity: .85;
+}
+
+    .btn-outline-danger:hover {
+        background-color: #750000;
+        color: white;
+        border: 1px solid white;
+        font-weight: bold;
+        opacity: .85;
+    }
+
+.card {
+    opacity: .85;
+}
+
+.form-control {
+    border-radius: 50px;
+    font-size: 20px;
+    padding-left: 2%;
+}
+
+option {
+    font-weight: normal;
+    display: block;
+    white-space: nowrap;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+    padding-left: 2%;
+}
