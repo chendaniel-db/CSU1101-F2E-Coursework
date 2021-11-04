@@ -149,5 +149,5 @@ option {
 
 .card-heard {
     padding-left: 2.5%;
-    border-radius: 20px;
+    border-radius: 20px 0px 20px 0px;
 }
