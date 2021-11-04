@@ -108,8 +108,27 @@ button:hover {
         opacity: .9;
     }
 
-.btn-outline-success {
+.btn-outline-danger {
     background-color: #CE0000;
+    font-size: 20px;
+    color: white;
+    border-radius: 50px;
+    padding: 7px 14px;
+    border: 1px solid white;
+    font-weight: bold;
+    opacity: .9;
+}
+
+    .btn-outline-danger:hover {
+        background-color: #00C200;
+        color: white;
+        border: 1px solid white;
+        font-weight: bold;
+        opacity: .9;
+    }
+
+.btn-outline-success {
+    background-color: #008000;
     font-size: 20px;
     color: white;
     border-radius: 50px;
