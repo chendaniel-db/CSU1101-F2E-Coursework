@@ -120,7 +120,7 @@ button:hover {
 }
 
     .btn-outline-danger:hover {
-        background-color: #00C200;
+        background-color: #750000;
         color: white;
         border: 1px solid white;
         font-weight: bold;
@@ -128,7 +128,7 @@ button:hover {
     }
 
 .btn-outline-success {
-    background-color: #008000;
+    background-color: #00C200;
     font-size: 20px;
     color: white;
     border-radius: 50px;
@@ -139,7 +139,7 @@ button:hover {
 }
 
     .btn-outline-success:hover {
-        background-color: #750000;
+        background-color: #008000;
         color: white;
         border: 1px solid white;
         font-weight: bold;
