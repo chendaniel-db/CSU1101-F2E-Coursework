@@ -56,13 +56,18 @@ function ShowTime() {
     setTimeout('ShowTime()', 1);
 }
 
+//F5 JS
+function fnF5() {
+    window.location.reload();
+}
+
 //計算總額 jQuery
 $("#cal").click(function () {
     var total = 0;
     $(".subtotal").each(function () {
         total += parseInt($(this).text())
     });
-    $('#total').text(total+' 元整');
+    $('#total').text(total + ' 元整');
 });
 
 
