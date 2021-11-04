@@ -1,7 +1,7 @@
 ﻿body {
     background: url('../img/backgroung.jpg') center center fixed;
     background-size: cover;
-    margin:0;
+    margin: 0;
 }
 
     body::-webkit-scrollbar {
@@ -174,7 +174,6 @@ option {
 
 /* Center the loader */
 #loader {
-    background: black;
     position: absolute;
     left: 50%;
     top: 50%;
