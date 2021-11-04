@@ -90,10 +90,47 @@ $.getJSON("https://ipinfo.io", function (response) {
     $("#myip").html('<i class="bi bi-globe"></i> 您目前所使用的IP地址為&ensp;' + response.ip + '<br>' + '<i class="bi bi-exclamation-octagon"></i> 請勿隨意使用沒有安全性之網路，以免傳輸過程中發生資料外洩！');
 })
 
-//Loging
-setTimeout(function () {
-    $(document).ready(function () {
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("myDiv").style.display = "block";
-    });
-}, 10000);
+//Loding Time JS 
+const loadingEl = document.querySelector(".loading");
+const loadingNumEl = document.querySelector(".loading-num");
+const restartBtn = document.querySelector(".restart-btn");
+
+let num = 0;
+
+const showLoading = () => {
+    loadingEl.classList.add("active");
+    window.loadingInterval = setInterval(() => {
+        num++;
+
+        if (num <= 100) loadingNumEl.textContent = num;
+        else clearInterval(loadingInterval);
+    }, 18);
+};
+
+const hideLoading = () => loadingEl.classList.remove("active");
+
+const clearLoadingNum = (e) => {
+    const isLodingShow = [...loadingEl.classList].includes("active");
+    const { propertyName } = e;
+
+    if (propertyName === "visibility" && !isLodingShow) {
+        num = 0;
+    }
+};
+
+const requestBack = () => {
+    setTimeout(() => {
+        hideLoading();
+        clearInterval(loadingInterval);
+    }, 2000);
+};
+
+const init = () => {
+    showLoading();
+    requestBack();
+};
+
+init();
+
+restartBtn.addEventListener("click", init);
+loadingEl.addEventListener("transitionend", clearLoadingNum);
