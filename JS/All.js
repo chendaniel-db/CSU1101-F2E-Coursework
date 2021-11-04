@@ -96,4 +96,4 @@ setTimeout(function () {
         document.getElementById("loader").style.display = "none";
         document.getElementById("myDiv").style.display = "block";
     });
-}, 2000);
+}, 10000);
