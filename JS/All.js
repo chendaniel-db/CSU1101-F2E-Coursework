@@ -89,3 +89,11 @@ $(function () {
 $.getJSON("https://ipinfo.io", function (response) {
     $("#myip").html('<i class="bi bi-globe"></i> 您目前所使用的IP地址為&ensp;' + response.ip + '<br>' + '<i class="bi bi-exclamation-octagon"></i> 請勿隨意使用沒有安全性之網路，以免傳輸過程中發生資料外洩！');
 })
+
+//Loging
+setTimeout(function () {
+    $(document).ready(function () {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+    });
+}, 500);
