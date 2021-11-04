@@ -1,6 +1,6 @@
 ﻿body {
     background: url('../img/backgroung.jpg') center center fixed;
-    background-size:cover;
+    background-size: cover;
 }
 
     body::-webkit-scrollbar {
@@ -129,7 +129,7 @@ button:hover {
 
 .card {
     opacity: .9;
-    border-radius:10px;
+    border-radius: 10px;
 }
 
 .form-control {
@@ -145,4 +145,8 @@ option {
     min-height: 1.2em;
     padding: 0px 2px 1px;
     padding-left: 2%;
+}
+
+.card-heard {
+    padding-left: 5%;
 }
