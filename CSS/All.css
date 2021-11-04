@@ -1,5 +1,6 @@
 ﻿body {
     background: url('../img/backgroung.jpg') center center fixed;
+    -webkit-filter: brightness(80%);
     background-size: cover;
 }
 
