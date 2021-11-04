@@ -62,7 +62,7 @@ $("#cal").click(function () {
     $(".subtotal").each(function () {
         total += parseInt($(this).text())
     });
-    $('#total').text(total+' 元');
+    $('#total').text(total+' 元整');
 });
 
 
