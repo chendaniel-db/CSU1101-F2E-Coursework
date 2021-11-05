@@ -148,7 +148,7 @@ button:hover {
     }
 
 .card {
-    opacity: .95;
+    opacity: .9;
     border-radius: 20px;
 }
 
@@ -176,7 +176,7 @@ option {
     font-weight: bold;
     visibility: hidden;
     opacity: 0;
-    backdrop-filter: brightness(10%);
+    backdrop-filter: brightness(5%);
     position: fixed;
     left: 0;
     right: 0;
@@ -186,7 +186,7 @@ option {
 }
 
     .loading.active {
-        backdrop-filter: brightness(10%);
+        backdrop-filter: brightness(5%);
         visibility: visible;
         opacity: 1;
     }
