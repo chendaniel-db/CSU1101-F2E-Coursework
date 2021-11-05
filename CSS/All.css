@@ -1,5 +1,5 @@
 ﻿body {
-    background: url('../img/backgroung.jpg') center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url('../img/backgroung.jpg') center center fixed;
     background-size: cover;
     margin: 0;
 }
@@ -148,7 +148,7 @@ button:hover {
     }
 
 .card {
-    opacity: .9;
+    opacity: .95;
     border-radius: 20px;
 }
 
@@ -171,8 +171,6 @@ option {
     padding-left: 2.5%;
     border-radius: 20px 20px 0px 0px;
 }
-
-/* Center the loader */
 
 .loading {
     font-weight: bold;
