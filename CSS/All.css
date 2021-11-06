@@ -1,11 +1,11 @@
 ﻿body {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url('../img/backgroung.jpg') center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url('../img/Basic/backgroung.jpg') center center fixed;
     background-size: cover;
     margin: 0;
 }
 
     body::-webkit-scrollbar {
-        width: 15px;
+        width: 10px;
     }
 
     body::-webkit-scrollbar-track {
@@ -16,6 +16,19 @@
         background-color: #BEBEBE;
         border-radius: 100px;
     }
+
+select::-webkit-scrollbar {
+    width: 10px;
+}
+
+select::-webkit-scrollbar-track {
+    background: #F0F0F0;
+}
+
+select::-webkit-scrollbar-thumb {
+    background-color: #BEBEBE;
+    border-radius: 100px;
+}
 
 .container {
     margin-top: 50px;

@@ -20,6 +20,7 @@ function fnOrder() {
     title = selName.options[selName.selectedIndex].innerHTML
 
     imgName = selName.options[selName.selectedIndex].text + ".jpg";
+    altName = selName.options[selName.selectedIndex].text;
 
     divshow.innerHTML +=
         "<tr> <td align='center' valign='middle'>" + stype +
@@ -29,7 +30,7 @@ function fnOrder() {
         "</td> <td align='center' valign='middle'>" + price +
         "</td> <td align='center' valign='middle'>" + qty +
         "</td> <td align='center' valign='middle' class='subtotal'>" + total +
-        "</td> <td align='center' valign='middle'>" + "<img src='img/" + imgName + "' width='150px'>" +
+    "</td> <td align='center' valign='middle'>" + "<a href='img/Map/" + imgName + "' + target='_blank'> <img src='img/Map/" + imgName + "' width='150px' + alt='" + altName + " 景 觀 圖'>" +
         "</td> <td align='center' valign='middle'> <button type='button' class='btn btn-outline-danger position-relative btn-bg' onclick='fnDelet(this)' style='width:auto;'><svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trash' viewBox='0 0 16 16'><path d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z'/><path fill-rule='evenodd' d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z'/></svg><font style='vertical-align:inherit;'> 刪 除 Delet</font></button>" +
         "</td>" + "</tr>";
 }
@@ -87,7 +88,7 @@ $(function () {
 
 //IP位置 jQuery
 $.getJSON("https://ipinfo.io", function (response) {
-    $("#myip").html('<i class="bi bi-globe"></i> 您目前所使用的IP地址為&ensp;' + response.ip + '<br>' + '<i class="bi bi-exclamation-octagon"></i> 請勿隨意使用沒有安全性之網路，以免傳輸過程中發生資料外洩！');
+    $("#myip").html('<i class="bi bi-globe"></i> 您目前IP地址為&ensp;' + response.ip + ' 並使用SSL進行傳輸！' + '<br>' + '<i class= "bi bi-exclamation-triangle"></i> 本網頁之所有素材皆用於教育用途，不得進行商業化之使用！' + '<br>' + '<i class="bi bi-exclamation-octagon"></i> 請勿隨意使用沒有安全性之網路，以免傳輸過程中發生資料外洩！');
 })
 
 //Loding Time JS 
