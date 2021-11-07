@@ -8726,7 +8726,7 @@ jQuery._evalUrl = function( url, options, doc ) {
 		type: "GET",
 		dataType: "script",
 		cache: true,
-		async: true,
+		async: false,
 		global: false,
 		scriptAttrs: options.crossOrigin ? { "crossOrigin": options.crossOrigin } : undefined,
 
