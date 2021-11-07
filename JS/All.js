@@ -133,5 +133,4 @@ const init = () => {
 
 init();
 
-restartBtn.addEventListener("click", init);
 loadingEl.addEventListener("transitionend", clearLoadingNum);
