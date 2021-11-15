@@ -1,0 +1,230 @@
+﻿body {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url('../img/Basic/backgroung.jpg') center center fixed;
+    background-size: cover;
+    margin: 0;
+}
+
+    body::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    body::-webkit-scrollbar-track {
+        background: #F0F0F0;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: #BEBEBE;
+        border-radius: 100px;
+    }
+
+select::-webkit-scrollbar {
+    width: 10px;
+}
+
+select::-webkit-scrollbar-track {
+    background: #F0F0F0;
+}
+
+select::-webkit-scrollbar-thumb {
+    background-color: #BEBEBE;
+    border-radius: 100px;
+}
+
+.container {
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.A, p {
+    font-size: 20px;
+}
+
+img {
+    border-radius: 10px;
+}
+
+table {
+    text-align: center;
+    font-size: 18px;
+}
+
+tfoot {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+tbody > tr:hover {
+    -webkit-animation: tbody-hover 0.8s infinite;
+    -moz-animation: tbody-hover 0.8s infinite;
+    -o-animation: tbody-hover 0.8s infinite;
+    animation: tbody-hover 0.8s infinite;
+}
+
+@-webkit-keyframes tbody-hover {
+    0%, 49% {
+        background-color: #FFE5CC;
+    }
+
+    50%, 100% {
+        background-color: white;
+    }
+}
+
+button:hover {
+    transition: 0.5s;
+}
+
+.toTop-arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 40%;
+    opacity: 0.8;
+    background: #000;
+    cursor: pointer;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    display: none;
+}
+
+    .toTop-arrow::before, .toTop-arrow::after {
+        width: 18px;
+        height: 5px;
+        border-radius: 8px;
+        background: #f90;
+        position: absolute;
+        content: "";
+    }
+
+    .toTop-arrow::before {
+        transform: rotate(-45deg) translate(0, -50%);
+        left: 0.5rem;
+    }
+
+    .toTop-arrow::after {
+        transform: rotate(45deg) translate(0, -50%);
+        right: 0.5rem;
+    }
+
+    .toTop-arrow:focus {
+        outline: none;
+    }
+
+
+.btn-outline-primary {
+    background-color: #1c6288;
+    font-size: 20px;
+    border-radius: 50px;
+    color: white;
+    padding: 7px 14px;
+    border: 1px solid white;
+    font-weight: bold;
+    opacity: .9;
+}
+
+    .btn-outline-primary:hover {
+        background-color: #13445e;
+        border: 0;
+        border: 1px solid white;
+        opacity: .9;
+    }
+
+.btn-outline-danger {
+    background-color: #CE0000;
+    font-size: 20px;
+    color: white;
+    border-radius: 50px;
+    padding: 7px 14px;
+    border: 1px solid white;
+    font-weight: bold;
+    opacity: .9;
+}
+
+    .btn-outline-danger:hover {
+        background-color: #750000;
+        color: white;
+        border: 1px solid white;
+        font-weight: bold;
+        opacity: .9;
+    }
+
+.btn-outline-success {
+    background-color: #009400;
+    font-size: 20px;
+    color: white;
+    border-radius: 50px;
+    padding: 7px 14px;
+    border: 1px solid white;
+    font-weight: bold;
+    opacity: .9;
+}
+
+    .btn-outline-success:hover {
+        background-color: #008000;
+        color: white;
+        border: 1px solid white;
+        font-weight: bold;
+        opacity: .9;
+    }
+
+.card {
+    opacity: .9;
+    border-radius: 20px;
+}
+
+.form-control {
+    border-radius: 50px;
+    font-size: 20px;
+    padding-left: 2%;
+}
+
+option {
+    font-weight: normal;
+    display: block;
+    white-space: nowrap;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+    padding-left: 2%;
+}
+
+.card-heard {
+    padding-left: 2.5%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.loading {
+    font-weight: bold;
+    visibility: hidden;
+    opacity: 0;
+    backdrop-filter: brightness(5%);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: opacity 1s, visibility 1s, backdrop-filter 1s;
+}
+
+    .loading.active {
+        backdrop-filter: brightness(5%);
+        visibility: visible;
+        opacity: 1;
+    }
+
+.loading-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: white;
+    font-size: 52px;
+}
+
+.loading-num {
+    display: inline-block;
+    width: 80px;
+}
