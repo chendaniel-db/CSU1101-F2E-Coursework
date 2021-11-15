@@ -28,7 +28,7 @@ function fnOrder() {
         "</td> <td align='center' valign='middle'>" + tp +
         "</td> <td align='center' valign='middle'>" + unti +
         "</td> <td align='center' valign='middle'>" + price +
-        "</td> <td align='center' valign='middle'>" + qty +
+        "</td> <td align='center' valign='middle' class='subtqty'>" + qty +
         "</td> <td align='center' valign='middle' class='subtotal'>" + total +
     "</td> <td align='center' valign='middle'>" + "<a href='img/Map/" + imgName + "' + target='_blank'> <img src='img/Map/" + imgName + "' width='150px' height='100px'+ alt='" + altName + " 景 觀 圖' + title='" + altName + " 景 觀 圖'>" +
         "</td> <td align='center' valign='middle' style='border-radius: 0px 20px 20px 0px;'> <button type='button' class='btn btn-outline-danger position-relative btn-bg' onclick='fnDelet(this)' style='width:auto;'><svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trash' viewBox='0 0 16 16'><path d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z'/><path fill-rule='evenodd' d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z'/></svg><font style='vertical-align:inherit;'> 刪 除 Delet</font></button>" +
@@ -62,15 +62,22 @@ function fnF5() {
     window.location.reload();
 }
 
-//計算總額 jQuery
+//計算總額+數量 jQuery
 $("#cal").click(function () {
     var total = 0;
+    var tqty = 0;
+
     $(".subtotal").each(function () {
         total += parseInt($(this).text())
     });
-    $('#total').text(total + ' 元整');
-});
 
+    $(".subtqty").each(function () {
+        tqty += parseInt($(this).text())
+    });
+
+    $('#total').text(total + ' 元整');
+    $('#tqty').text(tqty);
+});
 
 //回到頂端 jQuery
 $(function () {
