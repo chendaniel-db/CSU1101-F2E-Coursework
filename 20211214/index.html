@@ -1,0 +1,464 @@
+﻿<!doctype html>
+<html lang="zh-tw">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS Ver 4.6.1-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS Ver 5.1.3-->
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">-->
+    <!-- JQuery CDN Ver 3.6.0-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>40911102 HSR JQuery</title>
+
+</head>
+
+<body style="font-size:18px">
+
+    <div class="container text-center align-middle" style="border-radius:20px;">
+
+        <div class="w-95 mx-auto">
+
+            <h3 class="w-50 mx-auto" style="text-align:center">ＨＳＲ 台灣高鐵購票練習系統</h3>
+
+            <form>
+
+                <div class="form-row">
+
+                    <!--基本資料-->
+
+                    <label class="col-md-3 col-form-label col-form-label-sm border border-dark" style="font-size:18px">基本資料</label>
+
+                    <div class="col-md-9 form-row border border-dark">
+                        <div class="form-group col-md-6">
+                            <label for="uname">姓名</label>
+                            <input type="text" class="form-control" id="uname">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="ucom">公司名稱</label>
+                            <input type="text" class="form-control" id="ucom">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <!--顧客類型選擇-->
+
+                    <label class="col-md-3 col-form-label col-form-label-sm border border-dark" style="font-size:18px">顧客類型</label>
+
+                    <div class="col-md-9 form-row border border-dark p-2">
+
+                        <div class="form-check form-check-inline ml-2">
+                            <input name="ctype" class="form-check-input" type="checkbox" id="c01" value="c01">
+                            <label class="form-check-label" for="c01">旅客</label>
+                        </div>
+
+                        <div class="form-check form-check-inline ml-2">
+                            <input name="ctype" class="form-check-input" type="checkbox" id="c02" value="c02">
+                            <label class="form-check-label" for="c02">社區居民</label>
+                        </div>
+
+                        <div class="form-check form-check-inline ml-2">
+                            <input name="ctype" class="form-check-input" type="checkbox" id="c03" value="c03">
+                            <label class="form-check-label" for="c03">媒體</label>
+                        </div>
+
+                        <div class="form-check form-check-inline ml-2">
+                            <input name="ctype" class="form-check-input" type="checkbox" id="c04" value="c04">
+                            <label class="form-check-label" for="c04">員工</label>
+                        </div>
+
+                        <div class="form-check form-check-inline ml-2">
+                            <input name="ctype" class="form-check-input" type="checkbox" id="c05" value="c05">
+                            <label class="form-check-label" for="c05">股東與投資人</label>
+                        </div>
+
+                        <div class="form-check form-check-inline ml-2">
+                            <input name="ctype" class="form-check-input" type="checkbox" id="c06" value="c06">
+                            <label class="form-check-label" for="c06">合作夥伴（包含非政府組織與學校）</label>
+                        </div>
+
+                        <div class="form-check form-check-inline ml-2">
+                            <input name="ctype" class="form-check-input" type="checkbox" id="c07" value="c07">
+                            <label class="form-check-label" for="c07">供應商與承包商</label>
+                        </div>
+
+                        <div class="form-check form-check-inline ml-2">
+                            <input name="ctype" class="form-check-input" type="checkbox" id="c08" value="c08">
+                            <label class="form-check-label" for="c08">政府與主管機關</label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <label class="col-md-3 col-form-label col-form-label-sm border border-dark" style="font-size:18px">起訖站</label>
+
+                    <div class="col-md-9 form-row border border-dark">
+
+                        <div class="form-group col-md-6">
+
+                            <label for="sFrom">起程站</label>
+
+                            <select id="sFrom" class="form-control">
+                                <option selected disabled="disabled" value="">請選擇...</option>
+                            </select>
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+
+                            <label for="sTo">到達站</label>
+
+                            <select id="sTo" class="form-control">
+                                <option selected disabled="disabled" value="">請選擇...</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <!--車相類型選擇-->
+
+                    <label class="col-md-3 col-form-label col-form-label-sm border border-dark" style="font-size:18px">車廂種類</label>
+
+                    <div class="col-md-9 form-row border border-dark" style="padding-left: 15px;">
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="carType" id="stdCar" value="stdCar">
+                            <label class="form-check-label" for="stdCar">標準車廂</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="carType" id="busiCar" value="busiCar">
+                            <label class="form-check-label" for="busiCar">商務車廂</label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <!--座位類型選擇-->
+
+                    <label class="col-md-3 col-form-label col-form-label-sm border border-dark" style="font-size:18px">座位喜好</label>
+
+                    <div class="col-md-9 form-row border border-dark" style="padding-left: 15px;">
+
+                        <div class="form-check form-check-inline">
+                            <input name="theSeat" class="form-check-input" type="radio" id="non" value="non">
+                            <label class="form-check-label" for="non">無</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input name="theSeat" class="form-check-input" type="radio" id="window" value="window">
+                            <label class="form-check-label" for="window">靠窗優先</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input name="theSeat" class="form-check-input" type="radio" id="aile" value="aile">
+                            <label class="form-check-label" for="aile">走道優先</label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <!--訂位類型選擇-->
+
+                    <label class="col-md-3 col-form-label col-form-label-sm border border-dark" style="font-size:18px">訂位方式</label>
+
+                    <div class="col-md-9 form-row border border-dark" style="padding-left: 15px;">
+
+                        <div class="form-check form-check-inline">
+                            <input name="TicketBy" class="form-check-input" type="radio" id="stdCarTime" value="stdCarTime">
+                            <label class="form-check-label" for="stdCarTime">依時間搜尋合適車次</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input name="TicketBy" class="form-check-input" type="radio" id="byCarNum" value="byCarNum">
+                            <label class="form-check-label" for="byCarNum">直接輸入車次號碼</label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <!--日期選擇-->
+
+                    <label class="col-md-3 col-form-label col-form-label-sm border border-dark" style="font-size:18px">時間</label>
+
+                    <div class="col-md-9 form-row border border-dark">
+
+                        <div class="form-group col-md-4">
+                            <label for="toDate">去程日期</label>
+                            <input type="date" class="form-control" id="toDate">
+                        </div>
+
+                        <div class="form-group col-md-4">
+
+                            <label for="toTime">去程出發時間</label>
+
+                            <select id="toTime" class="form-control">
+                                <option selected disabled="disabled" value="">請選擇...</option>
+                            </select>
+
+                        </div>
+
+                        <div class="form-check form-check-inline ml-2 col-md-3">
+                            <input name="backTicket" class="form-check-input" type="checkbox" id="backTicket" value="backTicket">
+                            <label class="form-check-label" for="backTicket">訂購回程</label>
+                        </div>
+
+                        <div class="form-row col-md-12" style="display:none;" id="buyTicketShow">
+
+                            <div class="form-group col-md-4">
+                                <label for="backDate">回程日期</label>
+                                <input type="date" class="form-control" id="backDate">
+                            </div>
+
+                            <div class="form-group col-md-4">
+
+                                <label for="backTime">回程出發時間</label>
+
+                                <select id="backTime" class="form-control">
+                                    <option selected disabled="disabled" value="">請選擇...</option>
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <!--購票類型選擇-->
+
+                    <label class="col-md-3 col-form-label col-form-label-sm border border-dark" style="font-size:18px">購票類型與數量</label>
+
+                    <div class="col-md-9 form-row border border-dark">
+
+                        <div class="form-group col-md-3">
+
+                            <label for="fTicket">全票</label>
+
+                            <select id="fTicket" class="form-control">
+
+                                <option value="0f" selected>0</option>
+                                <option value="1f">1</option>
+                                <option value="2f">2</option>
+                                <option value="3f">3</option>
+                                <option value="4f">4</option>
+                                <option value="5f">5</option>
+                                <option value="6f">6</option>
+                                <option value="7f">7</option>
+                                <option value="8f">8</option>
+                                <option value="8f">9</option>
+                                <option value="10f">10</option>
+                            </select>
+
+                        </div>
+
+                        <div class="form-group col-md-3">
+
+                            <label for="hTicket">孩童票(6-11歲)</label>
+
+                            <select id="hTicket" class="form-control">
+                                <option valus="0h" selected>0</option>
+                                <option value="1h">1</option>
+                                <option value="2h">2</option>
+                                <option value="3h">3</option>
+                                <option value="4h">4</option>
+                                <option value="5h">5</option>
+                                <option value="6h">6</option>
+                                <option value="7h">7</option>
+                                <option value="8h">8</option>
+                                <option value="8h">9</option>
+                                <option value="10h">10</option>
+                            </select>
+
+                        </div>
+
+                        <div class="form-group col-md-3">
+
+                            <label for="wTicket">愛心票</label>
+
+                            <select id="wTicket" class="form-control">
+
+                                <option selected value="0w">0</option>
+                                <option value="1w">1</option>
+                                <option value="2w">2</option>
+                                <option value="3w">3</option>
+                                <option value="4w">4</option>
+                                <option value="5w">5</option>
+                                <option value="6w">6</option>
+                                <option value="7w">7</option>
+                                <option value="8w">8</option>
+                                <option value="8w">9</option>
+                                <option value="10w">10</option>
+                            </select>
+
+                        </div>
+
+                        <div class="form-group col-md-3">
+
+                            <label for="eTicket">敬老票(65歲以上)</label>
+
+                            <select id="eTicket" class="form-control">
+
+                                <option selected value="0e">0</option>
+                                <option value="1e">1</option>
+                                <option value="2e">2</option>
+                                <option value="3e">3</option>
+                                <option value="4e">4</option>
+                                <option value="5e">5</option>
+                                <option value="6e">6</option>
+                                <option value="7e">7</option>
+                                <option value="8e">8</option>
+                                <option value="9e">9</option>
+                                <option value="10e">10</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="form-row mt-3">
+
+                    <div class="col-sm-1"></div>
+
+                    <button type="reset" class="btn btn-outline-danger col-sm-4 btn-lg" id="gdelet">清除</button>
+
+                    <div class="col-sm-2"></div>
+
+                    <button type="button" class="btn btn-outline-primary col-sm-4 btn-lg" id="gdata">取得所輸入資料</button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <!--課堂練習顯示-->
+
+        <div class="w-95 mx-auto mt-3" style="font-size: 18px;">
+
+            <!--資料顯示-->
+
+            <div class="form-row">
+
+                <label class="col-md-3 col-form-label col-form-label-sm border border-dark" style="font-size:18px">課堂練習項目</label>
+                <div class="col-md-9 form-row border border-dark text-center" id="outArea" style="padding-left:1%;font-size:16.5px"></div>
+
+            </div>
+
+        </div>
+
+        <div class="w-95 mx-auto mt-3" style="font-size:18px">
+
+            <!--資料顯示-->
+
+            <div class="form-row">
+
+                <label class="col-md-3 col-form-label col-form-label-sm border border-dark" style="font-size:18px">系統隨機序號</label>
+                <div class="col-md-9 form-row border border-dark" id="OutKey"></div>
+
+            </div>
+
+            <div class="form-row">
+
+                <label class="col-md-3 col-form-label col-form-label-sm border border-dark" style="font-size:18px">基本資料</label>
+                <div class="col-md-9 form-row border border-dark" id="outBasic"></div>
+
+            </div>
+
+            <div class="form-row">
+
+                <label class="col-md-3 col-form-label col-form-label-sm border border-dark" style="font-size:18px">客戶型態</label>
+                <div class="col-md-9 form-row border border-dark" id="outCust"></div>
+
+            </div>
+
+            <div class="form-row">
+
+                <label class="col-md-3 col-form-label col-form-label-sm border border-dark" style="font-size:18px">起訖站</label>
+                <div class="col-md-9 form-row border border-dark" id="outStation"></div>
+
+            </div>
+
+            <div class="form-row">
+
+                <label class="col-md-3 col-form-label col-form-label-sm border border-dark" style="font-size:18px">車廂種類</label>
+                <div class="col-md-9 form-row border border-dark" id="outCarType"></div>
+
+            </div>
+
+            <div class="form-row">
+
+                <label class="col-md-3 col-form-label col-form-label-sm border border-dark" style="font-size:18px">座位喜好</label>
+                <div class="col-md-9 form-row border border-dark" id="outSeatType"></div>
+
+            </div>
+
+            <div class="form-row">
+
+                <label class="col-md-3 col-form-label col-form-label-sm border border-dark" style="font-size:18px">訂位方式</label>
+                <div class="col-md-9 form-row border border-dark" id="outTicketBy"></div>
+
+            </div>
+
+            <div class="form-row">
+
+                <label class="col-md-3 col-form-label col-form-label-sm border border-dark" style="font-size:18px">時間</label>
+                <div class="col-md-9 form-row border border-dark" id="outTimeBy"></div>
+
+            </div>
+
+            <div class="form-row">
+
+                <label class="col-md-3 col-form-label col-form-label-sm border border-dark" style="font-size:18px">購票類型</label>
+                <div class="col-md-9 form-row border border-dark" id="outBuyType">&nbsp&nbsp&nbsp&nbsp全票：0&nbsp張&nbsp&nbsp&nbsp孩童票：0&nbsp張&nbsp&nbsp&nbsp愛心票：0&nbsp張&nbsp&nbsp&nbsp敬老票：0&nbsp張</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Import JavaScript File-->
+    <script src="JS/JavaScript All.js"></script>
+
+    <!-- Bootstrap CSS Ver 4.6.1-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS Ver 5.1.3-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
+
+</body>
+</html>
